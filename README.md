@@ -3,9 +3,8 @@
 <p align="center">
 <a href="https://github.com/phpshift/Website" target="_blank"><img src="https://img.shields.io/badge/Website-1.0.0-%23cc00ff" alt="Website"></a>
 </p>
+<hr/>
 <br/>
-
-## PHPShift
 
 **The world's first AI-powered full-stack PHP framework.**
 <br/>
