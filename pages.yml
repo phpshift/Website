@@ -1,0 +1,28 @@
+index:
+  - parts - index nav
+  - parts - main hero
+  - parts - overview
+  - parts - ecosystem
+  - parts - groups and channels
+  - parts - latest news
+  - parts - questions you might have
+  - parts - demo video
+  - parts - latest release
+  - parts - the vision
+  - parts - leading the concept
+  - parts - ownership and license
+  - parts - repositories
+  - parts - feedback
+  - parts - footer links
+
+news:
+  - parts - news nav
+  - parts - news feed
+
+roadmap:
+  - parts - roadmap nav
+  - parts - mini hero
+  - parts - release notes
+  - parts - roadmap
+  - parts - repositories
+  - parts - footer links

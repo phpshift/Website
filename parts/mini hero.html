@@ -1,0 +1,42 @@
+<style>
+  .hero {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #4d4d4d;
+
+    .tmark {
+      color: #bbb;
+      font-size: 30px;
+      margin-top: 4px;
+      margin-left: 2px;
+      margin-right: -14px;
+    }
+  }
+
+  .hero img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+  }
+</style>
+<section class="hero mt-2 pb-4">
+  <div class="container d-flex flex-column align-items-center">
+    <img class="h-100 w-100" src="../assets/background.png" alt=" " />
+    <div class="d-flex flex-column flex-md-row align-items-center">
+      <img src="../assets/phpshift-logo.png" alt=" " class="img-fluid" style="position: relative; height: 60px" />
+      <h1 class="display-3 d-flex pt-1" style="font-weight: normal">PHPShift<span class="tmark">™</span></h1>
+    </div>
+    <h2 class="fs-3 mb-1">World's First AI-Powered Full-Stack Framework</h2>
+  </div>
+</section>

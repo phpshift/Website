@@ -1,0 +1,160 @@
+<style>
+  .contact {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+  }
+  .contact-form form {
+    background-color: #212121;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    background-color: #303030;
+    color: white !important;
+    border: 1px solid #444;
+  }
+  /* RADIO GROUP STYLING */
+  .contact-form .radio-group {
+    background-color: #303030;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  .contact-form .radio-group label {
+    color: white;
+    margin-right: 8px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  .contact-form input[type="radio"] {
+    accent-color: #cc00ff;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background-color: #303030;
+    border: unset;
+    outline: unset;
+    box-shadow: unset;
+    border: 1px solid #cc00ff;
+  }
+  .contact-form button {
+    margin-top: 15px;
+    background-color: #cc00ff;
+    border: none;
+  }
+  .custom-radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+  }
+  .custom-radio input[type="radio"] {
+    display: none;
+  }
+  .radio-mark {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #888;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #444; /* default bg */
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+  .custom-radio input[type="radio"]:checked + .radio-mark {
+    background-color: #cc00ff; /* your custom selected bg */
+  }
+  .radio-mark::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    background: #cc00ff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+  }
+  .custom-radio input[type="radio"]:checked + .radio-mark::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .contact-form button:hover {
+    background-color: #cc00ff;
+    opacity: 0.7;
+  }
+</style>
+
+<section class="contact py-5 d-flex flex-column align-items-center" id="feedback">
+  <div class="container">
+    <h2 class="text-center mb-2">Feedback</h2>
+    <p class="text-center mb-2" style="color: #bbb; padding: 10px">If you've encountered a problem while using the PHPShift™ framework, we'd love to hear about it</p>
+    <p class="text-center mb-5">By submitting feedback via email to the PHPShift™ maintainer, you acknowledge, accept and agree that you are voluntarily providing your report without any expectation of compensation, recognition, or ownership. PHPShift's code is open and your feedback may be used to improve the PHPShift™ systems</p>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="contact-form">
+          <form id="emailForm">
+            <span class="form-label d-block mb-2">Category</span>
+            <div class="radio-group">
+              <label class="custom-radio hover-color">
+                <input type="radio" name="category" value="Design" checked required />
+                <span class="radio-mark"></span>
+                Design
+              </label>
+              <label class="custom-radio hover-color">
+                <input type="radio" name="category" value="Front End" />
+                <span class="radio-mark"></span>
+                Front End
+              </label>
+              <label class="custom-radio hover-color">
+                <input type="radio" name="category" value="Back End" />
+                <span class="radio-mark"></span>
+                Back End
+              </label>
+              <label class="custom-radio hover-color">
+                <input type="radio" name="category" value="AI Skills" />
+                <span class="radio-mark"></span>
+                AI Skills
+              </label>
+              <label class="custom-radio hover-color">
+                <input type="radio" name="category" value="Other" />
+                <span class="radio-mark"></span>
+                Other
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" required />
+            </div>
+            <div class="mb-3">
+              <label for="body" class="form-label">Description</label>
+              <textarea class="form-control" id="body" name="body" rows="4" required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary w-100" onclick="sendEmail()">Send Email</button>
+          </form>
+          <script>
+            function sendEmail() {
+              const subject = document.getElementById("subject").value.trim();
+              const bodyText = document.getElementById("body").value.trim();
+              const categoryInput = document.querySelector('input[name="category"]:checked');
+              const category = categoryInput ? categoryInput.value.trim() : "";
+
+              if (!subject || !bodyText || !category) {
+                return alert("Please fill out the entire form!");
+              }
+
+              const mailtoLink = `mailto:irakli@phpshift.com?subject=PHPShift ${category} Feedback - ${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+              window.open(mailtoLink, "_blank");
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

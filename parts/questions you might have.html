@@ -1,0 +1,80 @@
+<style>
+  .faq {
+    color: white;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    background-color: #212121;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+  }
+
+  .faq-question:hover {
+    background-color: #333;
+  }
+
+  .faq-answer {
+    padding: 20px;
+    background-color: #181818;
+  }
+</style>
+<section class="faq" id="questions">
+  <div class="container">
+    <h2 class="text-center mb-5">Questions You Might Have</h2>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(0)">World's first AI-powered full-stack framework? Every framework is AI-powered today . . .</button>
+      <div class="faq-answer" id="faq-answer-0">
+        <p>Well... you can use some AI tools to develop your code, but let's be specific: Today people might develop code with editor-integrated, non-framework-specific tools, or AI powered code editors, or platforms, or platform-offered subscription-based features... that often leads to irrelevant and unoptimized development as reported by developers.</p>
+        <p>All these things are platforms, or editor-integrated non-framework-specific tools, or platform-offered subscription-based features.</p>
+        <p>The statement “World's first AI-powered Full-Stack Framework” is correct for <strong>PHPShift™</strong> because this is an entirely new, an actual framework with its own AI integration and you don't need any additional tools anymore.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(2)">Will your creation replace developers?</button>
+      <div class="faq-answer" id="faq-answer-2">
+        <p>This framework is like a human body powered by a brain - if the brain is smart, the human works smart.</p>
+        <p>So, the framework will become as smart as AI develops. However, you'll see that the framework is already intelligent enough to understand an entire project and manage it.</p>
+        <p>PHPShift™ has algorithms that allow the framework to adapt itself and even improve its functionality based on user's needs. This is similar to backpropagation used in AI systems.</p>
+        <p>It will make you more powerful and quick. With an actual engineer overseeing its actions, your projects will become more reliable.</p>
+        <br />
+        <p>Here is a clear parallel to understand what Captain means for PHPShift:</p>
+        <p>Imagine a spaceship, or even a regular sea ship - It has a Captain who knows everything about the ship, but doesn't do all the heavy work by own (except in some situations). The Captain leads the crew, guides the ship along its path and commands the proper strategic solutions.</p>
+        <p>Once you understand PHPShift, you will feel the difference and level up yourself as the Captain of automated development procedures.</p>
+        <br />
+        <p>PHPShift allows you also to develop manually if you want to - it's up to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Toggle the visibility of FAQ answers
+  function toggleAnswer(index) {
+    var answer = document.getElementById("faq-answer-" + index);
+    // Toggle the display between block and none
+    if (answer.style.display === "none" || answer.style.display === "") {
+      answer.style.display = "block";
+    } else {
+      answer.style.display = "none";
+    }
+  }
+
+  // Initialize all FAQ answers to be hidden by default
+  document.addEventListener("DOMContentLoaded", function () {
+    var answers = document.querySelectorAll(".faq-answer");
+    answers.forEach(function (answer) {
+      answer.style.display = "none";
+    });
+  });
+</script>

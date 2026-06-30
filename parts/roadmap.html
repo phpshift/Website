@@ -1,0 +1,75 @@
+<style>
+  .roadmaplist {
+    max-width: 700px;
+    min-width: 340px;
+    height: 400px;
+    overflow-y: auto;
+    background: #22222296;
+    border: 1px solid #717171;
+    border-radius: 10px;
+    padding: 10px 30px 100px 50px;
+    width: 90vw;
+    color: white;
+
+    div {
+      h5 {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 1.6rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #717171;
+      }
+
+      .done {
+        color: #cc00ff;
+        border-color: #cc00ff;
+
+        a {
+          color: #cc00ff;
+        }
+      }
+
+      date {
+        font-size: 15px;
+        color: #808080;
+        &::before {
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+      }
+
+      ul {
+        padding-left: 15px;
+        margin: 0;
+        font-size: 1.3rem;
+        color: #ddd;
+
+        li a {
+          color: #ddd;
+          &:hover {
+            color: #cc00ff;
+          }
+        }
+      }
+    }
+  }
+  .roadmapcover {
+    height: 100px;
+    background: linear-gradient(to top, black, transparent);
+    margin-top: -100px;
+    max-width: 700px;
+    min-width: 340px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #717171;
+    border-top: unset;
+    width: 90vw;
+  }
+</style>
+<section class="features" id="roadmap">
+  <h2 class="text-center mb-5">Project Roadmap</h2>
+  <div class="container d-flex flex-column align-items-center">
+    <div class="roadmaplist">[[!roadmap]]</div>
+    <div class="roadmapcover"></div>
+  </div>
+</section>

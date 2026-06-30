@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /assets/
+Disallow: /map/
+Disallow: /notes/
 Allow: /
 
-Sitemap: https://phpshift.com/sitemap.xml
+Sitemap: /assets/sitemap.xml

@@ -1,0 +1,66 @@
+<style>
+  .noteslist {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+
+    .relopen {
+      max-height: unset;
+      border-color: rgb(198, 198, 198);
+    }
+
+    div {
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 360px;
+      max-width: 360px;
+      max-height: 400px;
+      height: max-content;
+      margin-bottom: 20px;
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #212121;
+      border: 1px solid #717171;
+
+      &:hover {
+        border-color: rgb(198, 198, 198);
+      }
+
+      &:first-child {
+        border: 1px solid #cc00ff;
+      }
+
+      h5 {
+        margin-bottom: 5px;
+      }
+
+      date {
+        font-size: 15px;
+        color: #808080;
+        &::before {
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+      }
+
+      ul {
+        padding-left: 15px;
+        margin: 0;
+      }
+    }
+  }
+</style>
+<section class="features" id="release_notes">
+  <h2 class="text-center mb-5">[[notes: count]] Release Notes</h2>
+  <div class="container d-flex justify-content-center">
+    <div class="noteslist">[[!notes]]</div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll(".noteslist > div").forEach(function (div) {
+    div.addEventListener("click", function () {
+      div.classList.toggle("relopen");
+    });
+  });
+</script>
